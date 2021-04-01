@@ -13,7 +13,7 @@ function test2() {
     for (var i = 1; i <= totalNumberofRows; i++) {
         
         for (var k = totalNumberofRows - i; k >= 1; k--){
-            output += '0' + '';
+            output += '0';
         }
         for (var j = 1; j <= i; j++) {
             output += '*' + '';
@@ -25,20 +25,14 @@ function test2() {
 
 
 function test3(n){
-    var a = '';
-    var n = 6;
-    var m = (n-1); 
-    for(i=1; i <= n; i++)
-    {
-        a = a.trim();
-        a = ' '.repeat(m) + a + (i > 1 ? ' ' : '') + '*';
-        console.log(a);
-        m--;
-       
+    for(var i=1; i<= n; i++){
+        var myval = '0'.repeat(n-i);
+        var myval1 = '*'. repeat(i*2 -1)
+        console.log(myval + myval1 + myval);
     }
     
 }
 
  console.log(test1())
 console.log(test2())
- console.log(test3())
+ console.log(test3(6))
